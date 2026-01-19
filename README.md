@@ -31,3 +31,33 @@ Qua bài thực hành này, tôi đã:
 - [x] Hoàn thành việc upload ảnh minh chứng lên GitHub.
 
 
+# Student Grade Analysis
+
+Bài tập thực hành kiểm thử đơn vị với JUnit.
+Chương trình phân tích danh sách điểm số học sinh để tìm ra số lượng học sinh giỏi và tính điểm trung bình hợp lệ.
+
+## Chức năng
+
+1.  **Đếm học sinh giỏi (`countExcellentStudents`):**
+    * Input: Danh sách điểm `List<Double>`.
+    * Logic: Đếm các điểm `>= 8.0`. Bỏ qua điểm `< 0` hoặc `> 10`.
+2.  **Tính điểm trung bình (`calculateValidAverage`):**
+    * Logic: Tính trung bình cộng các điểm trong khoảng `[0, 10]`.
+
+## Yêu cầu hệ thống
+
+* Java JDK 8 trở lên
+* JUnit 5 (Jupiter)
+* IDE: IntelliJ IDEA / Eclipse / VS Code
+
+## Cách chạy kiểm thử
+
+Sử dụng IDE để chạy file `StudentAnalyzerTest.java` hoặc dùng lệnh Maven/Gradle nếu có cấu hình build tool.
+
+### Kết quả Test Case mong đợi:
+
+| Tên Test Case | Input | Kỳ vọng | Kết quả |
+| :--- | :--- | :--- | :--- |
+| `testCountExcellentStudents_StandardCase` | `[9.0, 8.5, 7.0, 11.0, -1.0]` | `2` | Passed |
+| `testCalculateValidAverage_StandardCase` | `[9.0, 8.5, 7.0, 11.0, -1.0]` | `8.17` | Passed |
+| `testEmptyList` | `[]` | `0` | Passed |
